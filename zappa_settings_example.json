@@ -1,0 +1,12 @@
+{
+    "dev": {
+        "app_function": "db_writer.app",
+        "aws_region": "us-west-2",
+        "profile_name": "####",
+        "project_name": "####",
+        "keep_warm": false,
+        "role_name": "####",
+        "runtime": "python3.6",
+        "s3_bucket": "####"
+    }
+}

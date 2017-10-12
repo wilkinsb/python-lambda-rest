@@ -9,3 +9,4 @@ staticfiles/staticfiles.egg-info
 htmlcov/
 data/
 .idea/
+zappa_settings.json

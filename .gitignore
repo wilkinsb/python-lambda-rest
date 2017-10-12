@@ -1,0 +1,11 @@
+env/
+aws.json
+config.json
+config-*.json
+src/
+staticfiles/staticfiles.egg-info
+*.pyc
+.coverage
+htmlcov/
+data/
+.idea/

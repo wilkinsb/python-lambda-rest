@@ -1,6 +1,6 @@
 {
     "dev": {
-        "app_function": "db_writer.app",
+        "app_function": "main.app",
         "aws_region": "us-west-2",
         "profile_name": "####",
         "project_name": "####",

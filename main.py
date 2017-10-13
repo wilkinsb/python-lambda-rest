@@ -21,7 +21,7 @@ def verify_password(username, password):
 
 class Worker(Resource):
     """
-    The DB worker resource (/worker endpoint)
+    The Worker resource (/worker endpoint)
     """
 
     def get(self):

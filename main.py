@@ -5,7 +5,10 @@ from flask_httpauth import HTTPBasicAuth
 from flask_restful import Resource, Api, reqparse
 from flask_restful import abort as fr_abort
 
+import config
+
 app = Flask(__name__)
+api = Api(app)
 
 auth = HTTPBasicAuth()
 
@@ -15,8 +18,8 @@ def verify_password(username, password):
     """
     Authentication method.
     """
-    return username == os.getenv('LOGIN_USERNAME') and \
-           password == os.getenv('LOGIN_PASSWORD')
+    return username == config.LOGIN_USERNAME and \
+           password == config.LOGIN_PASSWORD
 
 
 class Worker(Resource):
@@ -36,6 +39,9 @@ class Worker(Resource):
         POST method for /worker resource
         """
         pass
+
+
+api.add_resource(Worker, "/worker")
 
 
 # We only need this for local development.

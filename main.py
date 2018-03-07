@@ -1,5 +1,3 @@
-import os
-
 from flask import Flask
 from flask_httpauth import HTTPBasicAuth
 from flask_restful import Resource, Api, reqparse

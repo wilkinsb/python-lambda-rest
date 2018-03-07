@@ -1,6 +1,6 @@
 from flask import Flask
+from flask_restful import Api
 
-import config
 from Worker.api import Worker
 
 app = Flask(__name__)

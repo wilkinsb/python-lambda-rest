@@ -1,7 +1,8 @@
 from flask_httpauth import HTTPBasicAuth
-from flask_restful import Resource, Api, reqparse
+from flask_restful import Resource, reqparse
 from flask_restful import abort as fr_abort
 
+import config
 
 auth = HTTPBasicAuth()
 

@@ -1,13 +1,6 @@
-env/
-aws.json
-config.json
-config-*.json
-src/
-staticfiles/staticfiles.egg-info
+.env
 *.pyc
-.coverage
-htmlcov/
-data/
+
 .idea/
 .vscode/
 

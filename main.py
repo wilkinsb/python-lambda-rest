@@ -1,19 +1,30 @@
 from flask import Flask
 from flask_restful import Api
+from flask_httpauth import HTTPBasicAuth
 
-from Worker.api import Worker
-from Builder.api import Builder
-from Datastore.api import Datastore
-from Transfer.api import Transfer
+from Long.api import LongTask
+from Short.api import ShortTask
+import config
+
 
 app = Flask(__name__)
 api = Api(app)
 
 
-api.add_resource(Worker, "/worker")
-api.add_resource(Builder, "/builder")
-api.add_resource(Datastore, "/datastore")
-api.add_resource(Transfer, "/transfer")
+auth = HTTPBasicAuth()
+
+
+@auth.verify_password
+def verify_password(username, password):
+    """
+    Authentication method.
+    """
+    return username == config.LOGIN_USERNAME and \
+           password == config.LOGIN_PASSWORD
+
+
+api.add_resource(ShortTask, "/short")
+api.add_resource(LongTask, "/long")
 
 
 # We only need this for local development.

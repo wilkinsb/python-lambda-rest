@@ -15,10 +15,6 @@ def get_user_data(**kwargs):
     Retrieve the user-data script that will be used to bootstrap
     ec2 workers.
     """
-    # FIXME outsource the URL to a config file.
-    # probably the final url we use will not be in a public
-    # repos so we will need to have credentials to get it
-    # from github, or have it in s3.
 
     user_data_template = """#!/bin/bash
 set -x

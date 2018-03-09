@@ -28,4 +28,7 @@ class ShortTask(Resource):
 
     @auth.login_required
     def post(self):
+        # Can do a short task here, anything that will not take more than 5 min
+        # Need to be sure AWS lambda setting for this function is at 5 min
+        # Or that this short function will not take longer than whatever AWS is set to
         return "Short POST"
